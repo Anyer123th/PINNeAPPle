@@ -1,0 +1,139 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pinneaple"
+version = "0.1.0"
+description = "Pinneaple: Physics AI platform toolkit (UPD/PhysicalSample, Geometry, Models, PINN Factory, Solvers, Training)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Yan Barros" }
+]
+keywords = ["physics-ai", "pinn", "pde", "scientific-ml", "geometry", "neural-operators", "surrogate-models"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "pandas>=2.0",
+  "pyyaml>=6.0",
+  "tqdm>=4.66",
+  "typing-extensions>=4.8",
+  "pydantic>=2.0",
+  "matplotlib>=3.8",
+  "torch>=2.2",
+]
+
+[project.optional-dependencies]
+# Geometry backends (optional)
+geom = [
+  "trimesh>=4.0.0",
+  "meshio>=5.3.0",
+]
+
+# Mesh simplification backends (optional; speed/quality)
+geom_simplify = [
+  "fast-simplification>=0.1.0",
+  "open3d>=0.18.0",
+]
+
+# CAD support (optional)
+cad = [
+  "cadquery>=2.4.0",
+]
+
+# Solvers
+solvers = [
+  "numba>=0.59",
+]
+
+# PINN factory (symbolics)
+pinn = [
+  "sympy>=1.12",
+]
+
+# Synthetic data generation helpers (if you use sympy + geometry)
+synth = [
+  "sympy>=1.12",
+  "trimesh>=4.0.0",
+  "meshio>=5.3.0",
+]
+
+# NASA / Earthdata examples (optional)
+earthdata = [
+  "requests>=2.31",
+  "earthaccess>=0.10.0",
+]
+
+# Everything (convenience)
+all = [
+  "trimesh>=4.0.0",
+  "meshio>=5.3.0",
+  "fast-simplification>=0.1.0",
+  "open3d>=0.18.0",
+  "cadquery>=2.4.0",
+  "numba>=0.59",
+  "sympy>=1.12",
+  "requests>=2.31",
+  "earthaccess>=0.10.0",
+]
+
+# Dev tools
+dev = [
+  "ruff>=0.5",
+  "pytest>=8.0",
+  "pytest-cov>=4.1",
+  "mypy>=1.8",
+  "build>=1.2",
+  "twine>=5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/barrosyan/pinneaple"
+Repository = "https://github.com/barrosyan/pinneaple"
+Issues = "https://github.com/barrosyan/pinneaple/issues"
+
+[project.scripts]
+pdb = "pinneaple_pdb.cli:main"
+pinneaple = "pinneaple_pdb.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+  "pinneaple_data",
+  "pinneaple_geom",
+  "pinneaple_models",
+  "pinneaple_pdb",
+  "pinneaple_pinn",
+  "pinneaple_solvers",
+  "pinneaple_train",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+warn_return_any = false
+warn_unused_ignores = true
+no_implicit_optional = true
